@@ -1,5 +1,4 @@
 from flask import Flask, redirect, render_template, request, url_for
-from waitress import serve
 from weather import get_current_weather
 
 
@@ -26,4 +25,4 @@ def get_weather():
 
 
 if __name__ == '__main__':
-    serve(app, host="0.0.0.0", port=8000)
+    app.run(host="0.0.0.0", port=8000)
